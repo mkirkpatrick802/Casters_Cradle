@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ReferenceManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static ReferenceManager instance { private set; get; }
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Transform dropItem;
 }
